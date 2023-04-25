@@ -1,0 +1,41 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+@font-face {
+    font-family: Aviano;
+    src: url("../fonts/aviano-sansw-00-regular.woff2");
+}
+
+@font-face {
+    font-family: Georgia;
+    src: url("../fonts/georgia_regular_font-webfont.woff2");
+}
+
+
+
+html {
+    --text-orange: #FF7E35;
+    --text-beige: #FFF7EC;
+    --text-black: #000000;
+    --text-lightorange: #FEEBDA;
+    --text-lightbrown: #DFC9B4;
+    --text-darkbrown: #85694F;
+
+}
+
+
+
+
+
+body {
+    margin-inline: auto;
+    background-color: var(--text-beige);
+}
+
+
+

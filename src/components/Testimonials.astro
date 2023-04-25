@@ -1,0 +1,66 @@
+---
+
+---
+
+
+	<div class="section">
+
+		<div class="testi_box">
+			<p class="statement">“Jeg var forbi med mine veninder en fredag eftermiddag til et glas vin. Jeg vidste intet om naturvin men jeg er kæmpe fan ”</p>
+			<p class="customer">- Maria, kunde</p>
+		</div>
+
+        <div class="testi_box">
+			<p class="statement">“Lækre pøller og god stemning. Jeg kommer igen!”</p>
+			<p class="customer">- Allan, kunde</p>
+		</div>
+
+        <div class="testi_box">
+			<p class="statement">“Jeg er vild med Omadas æblejuice og den er og altid være en del af min hverdag”</p>
+			<p class="customer">- Solvej, kunde</p>
+		</div>
+
+    </div>
+
+
+<style>
+
+    .section {
+        padding-top: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: auto;
+    }
+
+    .testi_box {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 1.3rem;
+        font-family: Georgia;
+        border: solid 1px var(--text-orange);
+		background-color: var(--text-lightorange);
+		margin: auto;
+        padding: 20px;
+		box-shadow: 3px 3px 7px gray;
+        height: 235px;
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+    .customer {
+        color: var(--text-darkbrown);
+        margin-top: auto;
+    }
+
+    @media (min-width: 900px) {
+        .section {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            max-width: 1000px;
+            padding-top: 20px;
+        }
+    }
+
+
+</style>

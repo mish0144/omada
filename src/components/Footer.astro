@@ -1,0 +1,89 @@
+---
+
+---
+
+<footer>
+    <div class="footer">
+    <div class="icons">
+        <img src="../img/facebook_brown.webp" alt="">
+        <img src="../img/instagram_brown.webp" alt="">
+    </div>
+
+    <div class="newsletter">
+        <p>Tilmeld dig vores nyhedsbrev!</p>
+        <button class="mail_field">dinmail@omada.dk</button>
+        <button class="tilmeld">Tilmeld</button>
+    </div>
+</div>
+</footer>
+
+<style>
+    footer {
+        display: flex;
+        justify-content: center;
+        background-color: var(--text-lightbrown);
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        font-family: Georgia;
+        font-size: 1.3rem;
+    }
+
+    .footer img {
+        width: 80px;
+    }
+
+    .icons {
+        padding-bottom: 30px;
+    }
+
+    .mail_field {
+        padding: 10px;
+        border-radius: 5px;
+        border: solid 1px var(--text-darkbrown);
+        background-color: var(--text-beige);
+        color: var(--text-darkbrown);
+        margin-top: 10px;
+        font-family: Aviano;
+        font-size: 1.1rem;
+        color: #CCCCCC;
+        width: 100%;
+        text-align: left;
+    }
+
+    .tilmeld {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+        border-radius: 5px;
+        border: solid 1px var(--text-darkbrown);
+        background-color: var(--text-beige);
+        color: var(--text-darkbrown);
+        margin-top: 10px;
+        font-family: Aviano;
+        font-size: 1.1rem;
+    }
+
+    @media (min-width: 900px) {
+        .footer {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 1200px;
+            align-items: unset;
+            padding-bottom: 0px;
+        }
+
+        .mail_field {
+            width: 400px;
+        }
+
+
+    }
+
+</style>

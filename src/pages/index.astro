@@ -1,26 +1,531 @@
 ---
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/global.css";
+import Testiomonials from "../components/Testimonials.astro";
+import Form from "../components/Form.astro"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<header>
-			<img src="../img/logo.webp" alt="">
-			<button>Menu</button>
-		</header>
-		<main></main>
-		<footer></footer>
-	</body>
-</html>
+<MainLayout>
+	<div class="frontpage_banner">
+		<h1>Omada.Deli</h1>
+		<img src="../img/banner.webp" alt="Omada produkter" class="frontpage_banner_img">
+	</div>
+
+	<div class="orange_divide">
+	<div class="section1">
+		<div>
+			<h2>Besøg Omada.Deli</h2>
+			<p>Hos Omada deli finder du råvarer, vin og læskende drikke, der bygger på bæredygtige og omsorgsfulde principper. Sammen kan vi støtte de selvstændige, danske og økologiske landbrug. </p>
+			<p>Værdien bag vores varer bunder i glæden ved etisk landbrugsproduktion. En glæde og passion vi meget gerne vil dele med dig.</p>
+			<div class="icons">
+				<div>
+					<a href="">
+						<img src="../img/facebook_orange.webp" alt="Facebook" class="facebook_img">
+						<p>Facebook</p>
+					</a>
+				</div>
+				<div>
+					<a href="">
+						<img src="../img/instagram_orange.webp" alt="Instagram" class="instagram_img">
+						<p>Instagram</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		
+		<div>
+			<img src="../img/mark.webp" alt="Mark" class="mark_img">
+		</div>
+	</div>
+</div>
+
+<div class="orange_divide">
+	<div class="section2">
+
+		<h2>Events</h2>
+
+		<div class="event">
+			<div class="calender_box">
+				<p>Apr</p>
+				<h4>21</h4>
+			</div>
+			<div class="calender_event">
+				<p>Kl.: 16:00 - 20:00</p>
+				<h3>Plat du Jour: Chicken Fricassée</h3>
+			</div>
+		</div>
+
+		<div class="event">
+			<div class="calender_box">
+				<p>Maj</p>
+				<h4>5</h4>
+			</div>
+			<div class="calender_event">
+				<p>Kl.: 16:00 - 20:00</p>
+				<h3>Plat du Jour: Barbecue & wheat bread</h3>
+			</div>
+		</div>
+
+		<a href="">Se mere</a>
+
+	</div>
+</div>
+
+
+
+
+<div class="orange_divide">
+
+	<div class="section3">
+		<div class="products_img">
+			<img src="../img/produkt1.webp" alt="">
+			<img src="../img/produkt2.webp" alt="">
+			<img src="../img/produkt3.webp" alt="">
+			<img src="../img/produkt4.webp" alt="">
+		</div>
+
+		<a href="">Omada Social Club</a>
+	</div>
+
+</div>
+
+
+<div class="orange_divide">
+
+	
+<Testiomonials/>
+
+<Form/>
+
+</div>
+
+
+<div class="orange_divide">
+
+	<div class="section4">
+
+		<div class="section4_div">
+			<img src="../img/social.svg" alt="Social">
+			<h5>Bæredygtighed</h5>
+			<p>Vi prioriterer etisk og bæredygtig landbrugsproduktion.</p>
+		</div>
+
+		<div class="section4_div">
+			<img src="../img/vin.svg" alt="Naturvin">
+			<h5>Naturvin</h5>
+			<p>Vores udvalg af vin er 100% naturlig </p>
+		</div>
+
+		<div class="section4_div">
+			<img src="../img/ost.svg" alt="Mejeri og Kød">
+			<h5>Mejeri & Kød</h5>
+			<p>Vi tilbyder et særligt udvalgt sortiment af mejeri, kød, mm.</p>
+		</div>
+	
+	</div>
+
+</div>
+
+
+
+<div class="section5">
+
+	<h2>Omada Wine & Deli</h2>
+	<img src="../img/butik.webp" alt="Butik">
+
+	<div class="section5_div">
+
+		<div class="section5_div_div">
+			<h4>Åbningstider</h4>
+			<p>Onsdag - søndag</p>
+			<p>11.00 - 20.00</p>
+		</div>
+
+		<div class="section5_div_div">
+			<h4>Adresse</h4>
+			<p><a href="">Øster Farigmagsgade 26</a></p>
+			<p><a href="">2100 København Ø</a></p>
+		</div>
+
+		<div class="section5_div_div">
+			<h4>Kontakt</h4>
+			<p><a href="">omada.deli@live.dk</a></p>
+			<p><a href="">+45 40 40 31 60</a></p>
+		</div>
+	
+	</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+</MainLayout>
 
 <style>
-	body {
-		background-color: #FFF7EC;
+	h1 {
+		font-family: Aviano;
+		font-size: 3rem;
+		text-align: center;
+		font-weight: 100;
+		margin-bottom: 20px;
 	}
+
+	h2 {
+		font-family: Aviano;
+		font-size: 2.6rem;
+		font-weight: 100;
+		margin-bottom: 20px;
+		color: var(--text-orange);
+		padding-left: 20px;
+
+	}
+
+	.frontpage_banner_img {
+		width: 100%;
+
+	}
+
+	.orange_divide {
+			border-bottom: solid 1px var(--text-orange);
+			padding-top: 30px;
+		}
+
+	.section1 {
+		padding-bottom: 40px;
+	}
+
+	.section1 p {
+		font-size: 1.2rem;
+		font-family: Georgia;
+		padding-bottom: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.icons {
+		display: flex;
+		flex-direction: row;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		padding-left: 20px;
+		justify-content: center;
+		gap: 10px;
+	}
+
+	.icons a {
+		font-size: 1rem;
+		text-align: center;
+		text-decoration: none;
+		color: var(--text-black);
+		text-align: center;
+	}
+
+	.icons p {
+		padding-left: 7px;
+		text-align: center;
+	}
+
+	.facebook_img, .instagram_img {
+		width: 100px;
+	}
+
+	.mark_img {
+		width: 100%;
+	}
+
+	.section2 {
+		text-align: center;
+		padding-bottom: 60px;
+	}
+
+	.section2 h2 {
+		padding-bottom: 10px;
+	}
+	
+
+	.event {
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-bottom: 50px;
+	}
+
+	.calender_box {
+		border: solid 1px var(--text-orange);
+		width: 90px;
+		height: 100px;
+		background-color: var(--text-lightorange);
+		font-family: Aviano;
+		color: var(--text-orange);
+		margin: auto;
+		text-align: center;
+		box-shadow: 3px 3px 7px gray;
+	}
+
+	.calender_box p {
+		font-size: 1.3rem;
+		padding-top: 13px;
+	}
+
+	.calender_box h4 {
+		margin-top: -10px;
+		font-size: 3.8rem;
+		font-weight: 100;
+	}
+
+	.calender_event p {
+		text-align: center;
+		color: var(--text-darkbrown);
+		font-family: Georgia;
+		padding-top: 20px;
+		font-size: 1.2rem;
+	}
+
+	.calender_event h3 {
+		text-align: left;
+		color: var(--text-black);
+		font-family: Aviano;
+		padding-top: 10px;
+		font-size: 1.9rem;
+	}
+
+	.section2 a {
+		border: solid 1px var(--text-orange);
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 40px;
+		padding-right: 40px;
+		font-family: Aviano;
+		color: var(--text-orange);
+		border-radius: 5px;
+		text-decoration: none;
+		font-size: 1.3rem;
+	}
+
+	.products_img {
+		display: grid;
+    	grid-template-columns: repeat(auto-fill,minmax(169px,169px));
+    	gap: 10px;
+    	justify-content: center;
+		padding-top: 30px;
+    	padding-bottom: 50px;
+		margin: auto;
+	}
+
+	.products_img img {
+		width: 100%;
+	}
+
+	.section3 {
+		text-align: center;
+		padding-bottom: 60px;
+
+	}
+
+	.section3 a {
+		border: solid 1px var(--text-orange);
+	    padding-top: 5px;
+    	padding-bottom: 5px;
+	    padding-left: 20px;
+    	padding-right: 20px;
+    	font-family: Aviano;
+	    color: var(--text-orange);
+    	border-radius: 25px;
+    	text-decoration: none;
+    	font-size: 1.5rem;
+	}
+
+
+
+	.section4 {
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		padding-left: 50px;
+    	padding-right: 50px;
+		padding-top: 30px;
+		padding-bottom: 60px;
+		text-align: center;
+	}
+
+	.section4 img {
+		width: 100px;
+	}
+
+	.section4 h5 {
+		font-family: Aviano;
+		font-size: 1.3rem;
+		padding-top: 5px;
+	}
+
+	.section4 p {
+		font-family: Georgia;
+		font-size: 1rem;
+		color: var(--text-darkbrown);
+		padding-top: 5px;
+	}
+
+	.section5 h2 {
+		text-align: center;
+    	padding-left: 45px;
+    	padding-right: 45px;
+    	padding-top: 50px;
+	}
+
+	.section5 img {
+		width: 100%;
+	}
+
+	.section5_div {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		text-align: center;
+		padding-top: 30px;
+		padding-bottom: 50px;
+	}
+
+	.section5 h4 {
+		font-size: 1.9rem;
+		font-family: Aviano;
+		color: var(--text-orange);
+	}
+
+	.section5 p {
+		font-size: 1.2rem;
+		font-family: Georgia;
+		color: var(--text-black);
+	}
+
+	.section5 a {
+		text-decoration: none;
+		color: var(--text-black);
+	}
+
+
+
+	@media (min-width: 900px) {
+
+
+		.frontpage_banner {
+			display: grid;
+			grid-template-columns: repeat(3,1fr);
+			padding-top: 10px;
+		}
+
+
+		.frontpage_banner_img {
+			grid-column: 1/4;
+			grid-row: 1/1;
+		}
+
+		.frontpage_banner h1 {
+			grid-column: 2/3;
+			grid-row: 1/1;
+			z-index: 1;
+			padding-top: 100px;
+			font-size: 5rem;
+		}
+	
+
+		.section1 {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			margin: auto;
+			max-width: 1000px;
+			gap: 50px;
+		}
+
+		.section1 p {
+			font-size: 1.5rem;
+		}
+
+		.orange_divide {
+			padding-top: 70px;
+			padding-bottom: 30px;
+		}
+
+		.icons {
+			justify-content: left;
+		}
+
+		.section2 {
+			max-width: 1000px;
+			margin: auto;
+		}
+
+		.event {
+			display: flex;
+			flex-direction: row;
+
+		}
+
+		.calender_event {
+			width: 70%;
+		}
+
+		.calender_event p {
+			text-align: left;
+		}
+
+
+		.products_img {
+			width: 1000px;
+			grid-template-columns: repeat(auto-fill,minmax(235px,235px));
+		}
+
+		.section3 a {
+	    padding-top: 10px;
+    	padding-bottom: 10px;
+	    padding-left: 40px;
+    	padding-right: 40px;
+    	font-size: 2rem;
+	}
+
+	.section4 {
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-end;
+		padding-left: 50px;
+    	padding-right: 50px;
+		padding-top: 0px;
+		padding-bottom: 50px;
+		gap: 50px;
+	}
+
+	.section4_div {
+		width: 235px;
+	}
+
+	.section5 {
+		margin: auto;
+		text-align: center;
+	}
+
+	.section5 img {
+		width: 80%;
+	}
+
+	.section5_div {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		gap: 0px;
+		text-align: center;
+		padding-top: 40px;
+		padding-bottom: 60px;
+	}
+
+	.section5_div_div {
+		width: 300px;
+	}
+
+
+	}
+
 </style>

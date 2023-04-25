@@ -1,0 +1,75 @@
+---
+
+---
+
+<nav>
+    <div class="top_menu_div">
+        <img src="../img/logo.png" alt="Logo">
+        <button>Menu</button>
+    </div>
+    <div class="desktop_menu">
+        <ul>
+            <li><a href="">Vi Tilbyder</a></li>
+            <li><a href="">Events</a></li>
+            <li><a href="">Find Os</a></li>
+            <li><a href="">Social Club</a></li>
+            <li><a href="">Omada.Wine</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<style>
+	.top_menu_div {
+		display: flex;
+		justify-content: space-between;
+		border-bottom: solid 1px #FF7E35;
+		padding: 20px;
+        margin-bottom: 20px;
+	}
+
+	.top_menu_div img {
+		width: 60px;
+	}
+
+	.top_menu_div button {
+		border: none;
+		background-color: transparent;
+		font-family: Aviano;
+		font-size: 1.5rem;
+	}
+
+	.desktop_menu ul {
+			display: none;
+		}
+
+	@media (min-width: 900px) {
+		.top_menu_div {
+			display: flex;
+			justify-content: center;
+		}
+
+		.top_menu_div button {
+		display: none;
+		}
+
+		.desktop_menu ul {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: row;
+			max-width: 1000px;
+			margin-inline: auto;
+			list-style: none;
+			gap: 10px;
+			padding: 30px;
+		}
+
+		.desktop_menu ul li a {
+			text-decoration: none;
+			color: var(--text-black);
+			font-size: 1.3rem;
+			font-family: Aviano;
+		}
+
+	}
+</style>
