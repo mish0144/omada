@@ -1,42 +1,28 @@
 ---
-
+const {overskrift,name,text} = Astro.props;
 ---
 
 
-	<div class="section">
+
 
 		<div class="testi_box">
-			<p class="statement">“Jeg var forbi med mine veninder en fredag eftermiddag til et glas vin. Jeg vidste intet om naturvin men jeg er kæmpe fan ”</p>
-			<p class="customer">- Maria, kunde</p>
+			<p class="subject">{overskrift}</p>
+            <p class="statement">{text}</p>
+			<p class="customer">- {name}</p>
 		</div>
 
-        <div class="testi_box">
-			<p class="statement">“Lækre pøller og god stemning. Jeg kommer igen!”</p>
-			<p class="customer">- Allan, kunde</p>
-		</div>
 
-        <div class="testi_box">
-			<p class="statement">“Jeg er vild med Omadas æblejuice og den er og altid være en del af min hverdag”</p>
-			<p class="customer">- Solvej, kunde</p>
-		</div>
-
-    </div>
 
 
 <style>
 
-    .section {
-        padding-top: 30px;
-        padding-left: 20px;
-        padding-right: 20px;
-        margin: auto;
-    }
+
 
     .testi_box {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         font-family: Georgia;
         border: solid 1px var(--text-orange);
 		background-color: var(--text-lightorange);
@@ -48,19 +34,22 @@
         margin-bottom: 40px;
     }
 
+    .subject {
+        font-family: Aviano;
+        font-size: 1.1rem;
+        width: 100%;
+        text-align: left;
+        margin-top: 0px;
+        color: var(--text-orange);
+    }
+
+    .statement {}
+
     .customer {
         color: var(--text-darkbrown);
         margin-top: auto;
     }
 
-    @media (min-width: 900px) {
-        .section {
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            max-width: 1000px;
-            padding-top: 20px;
-        }
-    }
 
 
 </style>

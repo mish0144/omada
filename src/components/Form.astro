@@ -2,17 +2,68 @@
 
 ---
 
+
 <div class="section">
     <h2>Del din oplevelse</h2>
-
-    <p>Del din oplevelse med os her</p>
-    <button class="testi_field1">Navn</button>
-    <button class="testi_field2">Mail</button>
-    <button class="testi_field3">Skriv om din oplevelse her</button>
-
-    <a href="">Se mere</a>
+    <form id="myForm">
+        <label class="form_subject" for="name">Navn</label>
+        <input class="testi_field1" type="text" name="name" maxlength="15" required>
+        <label class="form_subject" for="overskrift">Overskrift</label>
+        <input class="testi_field1" type="text" name="overskrift" maxlength="17" required>
+        <label class="form_subject" for="text">Tekst</label>
+        <input class="testi_field2" type="text" name="text" maxlength="130" required>
+        <button type="submit" class="send_button">Send</button>
+    </form>
 
 </div>
+
+<script>
+    const url = "https://rjrzwvtomtixtkgbreek.supabase.co/rest/v1/testimonials";
+    const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJqcnp3dnRvbXRpeHRrZ2JyZWVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODY0NjYsImV4cCI6MTk5NDM2MjQ2Nn0.xL82bX3yjouiljtJwGFBPE1uYP-6Mf8uenm2Idz_6Zo";
+    
+    const send_button = document.querySelector(".send_button");
+    
+    const form = document.querySelector("#myForm");
+        form.addEventListener("submit", sendForm);
+    
+    function sendForm(event){
+        event.preventDefault();
+        const formData = form.elements;
+        let name = formData.name.value;
+        let text = formData.text.value;
+        let overskrift = formData.overskrift.value;
+    
+        console.log(formData.name.value);
+    
+        fetch(url, {
+           method:"POST",
+           headers: {
+            apikey: key,
+            'Accept':'application/json',
+            'Content-Type':'application/json' 
+           },
+           body:JSON.stringify({name, text, overskrift}),
+        })
+    send_button.addEventListener("click", submitForm);
+
+    function submitForm (){
+        if (form.submit) {
+            send_button.textContent = "Tak!"
+        }
+
+        else {
+            send_button.textContent = "Send"        }
+    }
+
+    }
+
+
+
+
+
+
+    
+    </script>
 
 
 
@@ -41,25 +92,26 @@
         color: var(--text-black);
     }
 
-    .testi_field1, .testi_field2, .testi_field3 {
+    .testi_field1, .testi_field2 {
         padding: 10px;
         border-radius: 5px;
         border: solid 1px var(--text-orange);
         background-color: var(--text-lightorange);
-        color: var(--text-lightbrown);
-        margin-top: 10px;
-        font-family: Aviano;
+        color: var(--text-darkbrown);
+        margin-top: 5px;
+        font-family: Georgia;
         font-size: 1.1rem;
         width: 100%;
         text-align: left;
+        margin-bottom: 15px;
     }
 
-    .testi_field3 {
+    .testi_field2 {
         height: 100px;
         margin-bottom: 30px;
     }
 
-    .section a {
+    .send_button {
 		border: solid 1px var(--text-orange);
 		padding-top: 5px;
 		padding-bottom: 5px;
@@ -70,7 +122,16 @@
 		border-radius: 5px;
 		text-decoration: none;
 		font-size: 1.3rem;
+        background-color: transparent;
 	}
+
+    .form_subject {
+        font-family: Aviano;
+        font-size: 1.1rem;
+        width: 100%;
+        text-align: left;
+        margin-top: 30px;
+    }
 
     @media (min-width: 900px) {
         .section {

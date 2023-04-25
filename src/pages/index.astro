@@ -5,6 +5,19 @@ import Testiomonials from "../components/Testimonials.astro";
 import Form from "../components/Form.astro"
 import Animation from "../components/Animation.astro";
 
+const url = "https://rjrzwvtomtixtkgbreek.supabase.co/rest/v1/testimonials?approved=is.true" ;
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJqcnp3dnRvbXRpeHRrZ2JyZWVrIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg3ODY0NjYsImV4cCI6MTk5NDM2MjQ2Nn0.xL82bX3yjouiljtJwGFBPE1uYP-6Mf8uenm2Idz_6Zo";
+
+const response = await fetch(url,{
+	method:"GET",
+	headers: {
+		apikey: key,
+		'Accept' :'application/json',
+		'Content-Type' :'application/json'
+	},
+});
+
+const udsagn = await response.json();
 
 ---
 
@@ -98,8 +111,14 @@ import Animation from "../components/Animation.astro";
 
 <div class="orange_divide">
 
-	
-<Testiomonials/>
+	<div class="section_testi">
+		{
+		udsagn.map((testimonial) => {
+			return <Testiomonials name = {testimonial.name} overskrift = {testimonial.overskrift} text = {testimonial.text} />
+
+		})
+		}
+	</div>
 
 <Form/>
 
@@ -172,6 +191,10 @@ import Animation from "../components/Animation.astro";
 
 
 </MainLayout>
+
+
+
+
 
 <style>
 	h1 {
@@ -351,6 +374,12 @@ import Animation from "../components/Animation.astro";
 		padding-top: 58px;
 	}
 
+	.section_testi {
+        padding-top: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: auto;
+    }
 
 
 	.section4 {
@@ -494,6 +523,13 @@ import Animation from "../components/Animation.astro";
 			padding-top: 16%;
 	    	font-size: 2.1vw;
 		}
+
+		.section_testi {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            max-width: 1000px;
+            padding-top: 20px;
+        }
 
 	.section4 {
 		flex-direction: row;
