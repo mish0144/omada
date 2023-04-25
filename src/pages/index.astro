@@ -3,6 +3,9 @@ import MainLayout from "../layouts/MainLayout.astro";
 import "../styles/global.css";
 import Testiomonials from "../components/Testimonials.astro";
 import Form from "../components/Form.astro"
+import Animation from "../components/Animation.astro";
+
+
 ---
 
 <MainLayout>
@@ -19,13 +22,13 @@ import Form from "../components/Form.astro"
 			<p>Værdien bag vores varer bunder i glæden ved etisk landbrugsproduktion. En glæde og passion vi meget gerne vil dele med dig.</p>
 			<div class="icons">
 				<div>
-					<a href="">
+					<a href="https://www.facebook.com/omada.wine" target="_blank">
 						<img src="../img/facebook_orange.webp" alt="Facebook" class="facebook_img">
 						<p>Facebook</p>
 					</a>
 				</div>
 				<div>
-					<a href="">
+					<a href="https://www.instagram.com/Omada.wine/?fbclid=IwAR2logdy0o4Y4HQTbq6ip437jhO05cuR3COG9vKtU2upQ_hB50O75BXaKeI" target="_blank">
 						<img src="../img/instagram_orange.webp" alt="Instagram" class="instagram_img">
 						<p>Instagram</p>
 					</a>
@@ -66,7 +69,7 @@ import Form from "../components/Form.astro"
 			</div>
 		</div>
 
-		<a href="">Se mere</a>
+		<a href="https://www.instagram.com/Omada.wine/?fbclid=IwAR2logdy0o4Y4HQTbq6ip437jhO05cuR3COG9vKtU2upQ_hB50O75BXaKeI" target="_blank">Se mere</a>
 
 	</div>
 </div>
@@ -78,13 +81,16 @@ import Form from "../components/Form.astro"
 
 	<div class="section3">
 		<div class="products_img">
-			<img src="../img/produkt1.webp" alt="">
-			<img src="../img/produkt2.webp" alt="">
-			<img src="../img/produkt3.webp" alt="">
-			<img src="../img/produkt4.webp" alt="">
+			<img src="../img/produkt1.webp" alt="Produkter">
+			<img src="../img/produkt2.webp" alt="Produkter">
+			<img src="../img/produkt3.webp" alt="Produkter">
+			<img src="../img/produkt4.webp" alt="Produkter">
 		</div>
 
-		<a href="">Omada Social Club</a>
+		<div class="animation_div">
+			<Animation/>
+			<a href="https://omada.wine/social-club/" target="_blank">Omada Social Club</a>
+		</div>
 	</div>
 
 </div>
@@ -143,14 +149,14 @@ import Form from "../components/Form.astro"
 
 		<div class="section5_div_div">
 			<h4>Adresse</h4>
-			<p><a href="">Øster Farigmagsgade 26</a></p>
-			<p><a href="">2100 København Ø</a></p>
+			<p><a href="https://goo.gl/maps/UTjRFgz6wVKGQ85t7" target="_blank">Øster Farigmagsgade 26</a></p>
+			<p><a href="https://goo.gl/maps/UTjRFgz6wVKGQ85t7" target="_blank">2100 København Ø</a></p>
 		</div>
 
 		<div class="section5_div_div">
 			<h4>Kontakt</h4>
-			<p><a href="">omada.deli@live.dk</a></p>
-			<p><a href="">+45 40 40 31 60</a></p>
+			<p><a href="mailto:omada.deli@live.dk">omada.deli@live.dk</a></p>
+			<p><a href="tel:+4540403160">+45 40 40 31 60</a></p>
 		</div>
 	
 	</div>
@@ -203,9 +209,10 @@ import Form from "../components/Form.astro"
 	.section1 p {
 		font-size: 1.2rem;
 		font-family: Georgia;
-		padding-bottom: 20px;
+		padding-bottom: 30px;
 		padding-left: 20px;
 		padding-right: 20px;
+		line-height: 1.3;
 	}
 
 	.icons {
@@ -313,7 +320,7 @@ import Form from "../components/Form.astro"
     	gap: 10px;
     	justify-content: center;
 		padding-top: 30px;
-    	padding-bottom: 50px;
+    	padding-bottom: 5px;
 		margin: auto;
 	}
 
@@ -323,21 +330,25 @@ import Form from "../components/Form.astro"
 
 	.section3 {
 		text-align: center;
-		padding-bottom: 60px;
+		padding-bottom: 20px;
 
 	}
 
+	.animation_div {
+		display: grid;
+		grid-template-columns: repeat(3,1fr);
+	}
+
+
 	.section3 a {
-		border: solid 1px var(--text-orange);
-	    padding-top: 5px;
-    	padding-bottom: 5px;
-	    padding-left: 20px;
-    	padding-right: 20px;
-    	font-family: Aviano;
-	    color: var(--text-orange);
-    	border-radius: 25px;
-    	text-decoration: none;
-    	font-size: 1.5rem;
+		font-family: Aviano;
+		color: var(--text-beige);
+		text-decoration: none;
+		font-size: 1.4rem;
+		grid-column: 2/3;
+		grid-row: 1/1;
+		z-index: 2;
+		padding-top: 58px;
 	}
 
 
@@ -374,7 +385,7 @@ import Form from "../components/Form.astro"
 		text-align: center;
     	padding-left: 45px;
     	padding-right: 45px;
-    	padding-top: 50px;
+    	padding-top: 70px;
 	}
 
 	.section5 img {
@@ -387,7 +398,7 @@ import Form from "../components/Form.astro"
 		gap: 30px;
 		text-align: center;
 		padding-top: 30px;
-		padding-bottom: 50px;
+		padding-bottom: 80px;
 	}
 
 	.section5 h4 {
@@ -480,12 +491,9 @@ import Form from "../components/Form.astro"
 		}
 
 		.section3 a {
-	    padding-top: 10px;
-    	padding-bottom: 10px;
-	    padding-left: 40px;
-    	padding-right: 40px;
-    	font-size: 2rem;
-	}
+			padding-top: 16%;
+	    	font-size: 2.1vw;
+		}
 
 	.section4 {
 		flex-direction: row;
@@ -508,23 +516,32 @@ import Form from "../components/Form.astro"
 	}
 
 	.section5 img {
-		width: 80%;
+		max-width: 1000px;
 	}
 
 	.section5_div {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
-		gap: 0px;
+		gap: 50px;
 		text-align: center;
-		padding-top: 40px;
-		padding-bottom: 60px;
+		padding-top: 60px;
+		padding-bottom: 100px;
 	}
 
 	.section5_div_div {
 		width: 300px;
 	}
 
+	.section5 p {
+		font-size: 1.5rem;
+		padding-top: 5px;
+	}
+
+	.section5 h4 {
+		font-size: 2rem;
+		padding-bottom: 5px;
+	}
 
 	}
 
